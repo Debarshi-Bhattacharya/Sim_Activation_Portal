@@ -3,15 +3,13 @@ package com.springboot.microservices.SimActivationPortal.customerServices.contro
 import com.springboot.microservices.SimActivationPortal.customerServices.dto.CustomerBasicDetailDTO;
 import com.springboot.microservices.SimActivationPortal.customerServices.dto.CustomerDTO;
 import com.springboot.microservices.SimActivationPortal.customerServices.dto.CustomerValidateDTO;
-import com.springboot.microservices.SimActivationPortal.customerServices.entity.CustomerAddressDao;
+import com.springboot.microservices.SimActivationPortal.customerServices.entity.CustomerAddress;
 import com.springboot.microservices.SimActivationPortal.customerServices.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 
@@ -19,6 +17,9 @@ import javax.validation.Valid;
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @PostMapping("/validateBasicDetails")
     public ResponseEntity<Object> validateDetails(@Valid @RequestBody CustomerBasicDetailDTO dto ) throws Exception {
@@ -33,15 +34,23 @@ public class CustomerController {
 
     }
     @PutMapping("/addAddress")
-    public ResponseEntity<Object> addAddress(@RequestBody @Valid CustomerAddressDao address) throws Exception{
+    public ResponseEntity<Object> addAddress(@RequestBody @Valid CustomerAddress address) throws Exception{
 
         return ResponseEntity.ok(customerService.addAddress(address));
     }
 
     @PostMapping(value = "/customerValidation",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> customerVlidation(@RequestBody @Valid CustomerDTO dto ) throws Exception{
+        String id = customerService.validateCustomerIdentity(dto);
+        if(id.length()<2)
+        {
+            System.out.println(id);
+            String result = this.restTemplate.getForObject("http://contact-service/contact/user/" + Integer.valueOf(id), String.class);
 
-        return ResponseEntity.ok(customerService.validateCustomerIdentity(dto));
-
+        }
+        else {
+            return ResponseEntity.ok(customerService.validateCustomerIdentity(dto));
+        }
+        return null;
     }
 }

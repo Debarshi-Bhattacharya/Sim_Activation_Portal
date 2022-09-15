@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 
 @Table(name="CustomerIdentitiy")
-public class CustomerIdentityDao {
+public class CustomerIdentity {
 	@Id
 	@NotNull
 	private String uniqueIdNumber;
@@ -55,8 +55,8 @@ public class CustomerIdentityDao {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public CustomerIdentityDao(String uniqueIdNumber, String dateOfbirth, String firstName, String lastName,
-                               String emailAddress, String state) {
+	public CustomerIdentity(String uniqueIdNumber, String dateOfbirth, String firstName, String lastName,
+							String emailAddress, String state) {
 
 		super();
 		this.uniqueIdNumber = uniqueIdNumber;
@@ -66,7 +66,7 @@ public class CustomerIdentityDao {
 		this.emailAddress = emailAddress;
 		this.state = state;
 	}
-	public CustomerIdentityDao() {
+	public CustomerIdentity() {
 		
 	}
 	

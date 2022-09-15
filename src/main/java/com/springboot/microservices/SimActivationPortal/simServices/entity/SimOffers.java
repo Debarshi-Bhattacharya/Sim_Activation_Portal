@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class SimOffersDao {
+public class SimOffers {
 
 	@Id
 	@NotNull
@@ -18,11 +18,11 @@ public class SimOffersDao {
 	private String offerName;
 	private int simId;
 
-	public SimOffersDao() {
+	public SimOffers() {
 
 	}
 
-	public SimOffersDao(int offerId, int callQty, int cost, int dataQty, int duration, String offerName, int simId) {
+	public SimOffers(int offerId, int callQty, int cost, int dataQty, int duration, String offerName, int simId) {
 		super();
 		this.offerId = offerId;
 		this.callQty = callQty;

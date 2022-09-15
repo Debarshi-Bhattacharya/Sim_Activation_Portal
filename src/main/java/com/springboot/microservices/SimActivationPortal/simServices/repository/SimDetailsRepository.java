@@ -1,6 +1,6 @@
 package com.springboot.microservices.SimActivationPortal.simServices.repository;
 
-import com.springboot.microservices.SimActivationPortal.simServices.entity.SimDetailsDao;
+import com.springboot.microservices.SimActivationPortal.simServices.entity.SimDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -10,10 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Repository
-public interface SimDetailsRepository extends JpaRepository<SimDetailsDao, Integer> {
+public interface SimDetailsRepository extends JpaRepository<SimDetails, Integer> {
 
     @Query("select u from SimDetails u where u.simId = ?1")
-    SimDetailsDao findById(Long id);
+    SimDetails findById(Long id);
 
     @Modifying
     @Transactional
@@ -21,5 +21,5 @@ public interface SimDetailsRepository extends JpaRepository<SimDetailsDao, Integ
     void activateSim(Integer simId, String active);
 
     @Query("select u from SimDetails u where u.simNumber = ?1 and u.serviceNumber = ?2")
-    Optional<SimDetailsDao> checkForBoth(String simNumber, String serviceNumber);
+    Optional<SimDetails> checkForBoth(String simNumber, String serviceNumber);
 }

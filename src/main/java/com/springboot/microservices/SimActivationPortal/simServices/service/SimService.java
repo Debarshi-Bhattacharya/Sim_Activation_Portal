@@ -1,13 +1,13 @@
 package com.springboot.microservices.SimActivationPortal.simServices.service;
 
 import com.springboot.microservices.SimActivationPortal.simServices.dto.SimDetailsDTO;
-import com.springboot.microservices.SimActivationPortal.simServices.entity.SimDetailsDao;
+import com.springboot.microservices.SimActivationPortal.simServices.entity.SimDetails;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface SimService {
 	
-      SimDetailsDao savedetails(SimDetailsDao ob);
+      SimDetails savedetails(SimDetails ob);
 
       StringBuilder getOffersByValidation(SimDetailsDTO dto) throws IllegalAccessException;
 }

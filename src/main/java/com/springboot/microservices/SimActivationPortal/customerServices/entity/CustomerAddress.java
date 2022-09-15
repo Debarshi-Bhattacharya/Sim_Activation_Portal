@@ -9,7 +9,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 
 @Entity
-public class CustomerAddressDao {
+public class CustomerAddress {
 
 	@Id
 	private int addressId;
@@ -27,7 +27,7 @@ public class CustomerAddressDao {
 	@Pattern(regexp="^[A-Za-z\s]*$",message="City/State should not contain any special characters except space")
 	private String state;
 
-	public CustomerAddressDao() {
+	public CustomerAddress() {
 
 	}
 
@@ -61,7 +61,7 @@ public class CustomerAddressDao {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public CustomerAddressDao(int addressId, String address, String city, int pincode, String state) {
+	public CustomerAddress(int addressId, String address, String city, int pincode, String state) {
 		super();
 		this.addressId = addressId;
 		this.address = address;

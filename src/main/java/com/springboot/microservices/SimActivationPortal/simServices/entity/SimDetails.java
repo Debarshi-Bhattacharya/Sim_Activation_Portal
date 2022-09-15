@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class SimDetailsDao {
+public class SimDetails {
 
 	@Id
 	@NotNull
@@ -16,7 +16,7 @@ public class SimDetailsDao {
 	private String simNumber;
 	private String simStatus;
 
-	public SimDetailsDao() {
+	public SimDetails() {
 
 	}
 	public Integer getSimId() {
@@ -43,7 +43,7 @@ public class SimDetailsDao {
 	public void setSimStatus(String simStatus) {
 		this.simStatus = simStatus;
 	}
-	public SimDetailsDao(Integer simId, String serviceNumber, String simNumber, String simStatus) {
+	public SimDetails(Integer simId, String serviceNumber, String simNumber, String simStatus) {
 		super();
 		this.simId = simId;
 		this.serviceNumber = serviceNumber;

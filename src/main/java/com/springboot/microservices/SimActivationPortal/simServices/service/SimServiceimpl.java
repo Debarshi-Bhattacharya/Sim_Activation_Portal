@@ -1,8 +1,8 @@
 package com.springboot.microservices.SimActivationPortal.simServices.service;
 
 import com.springboot.microservices.SimActivationPortal.simServices.dto.SimDetailsDTO;
-import com.springboot.microservices.SimActivationPortal.simServices.entity.SimDetailsDao;
-import com.springboot.microservices.SimActivationPortal.simServices.entity.SimOffersDao;
+import com.springboot.microservices.SimActivationPortal.simServices.entity.SimDetails;
+import com.springboot.microservices.SimActivationPortal.simServices.entity.SimOffers;
 import com.springboot.microservices.SimActivationPortal.simServices.repository.SimDetailsRepository;
 import com.springboot.microservices.SimActivationPortal.simServices.repository.SimOfferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,19 +23,19 @@ public class SimServiceimpl implements SimService {
 	private SimOfferRepository simOfferRepository;
 
 	@Override
-	public SimDetailsDao savedetails(SimDetailsDao ob) {
+	public SimDetails savedetails(SimDetails ob) {
 		return simRepository.save(ob);
 	}
 
 	@Override
 	public StringBuilder getOffersByValidation(SimDetailsDTO dto) throws IllegalAccessException {
 
-		Optional<SimDetailsDao> optSimCardDetails = simRepository.checkForBoth(dto.getSimNumber(), dto.getServiceNumber());
+		Optional<SimDetails> optSimCardDetails = simRepository.checkForBoth(dto.getSimNumber(), dto.getServiceNumber());
 
 		if(optSimCardDetails.isEmpty()) {
 			return new StringBuilder("Invalid details, please check again SIM number/Service number!!");
 		}
-		Optional<SimOffersDao> simOffers = simOfferRepository.findById(optSimCardDetails.get().getSimId());
+		Optional<SimOffers> simOffers = simOfferRepository.findById(optSimCardDetails.get().getSimId());
 		StringBuilder result = new StringBuilder();
 		result.append("OFFERS - ").append(System.lineSeparator());
 		for (Field field: simOffers.get().getClass().getDeclaredFields()){
