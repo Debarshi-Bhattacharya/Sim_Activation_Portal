@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d83f7c7-f743-401b-ad58-3f1a8ae1c15c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/controller/SimActivationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/controller/SimActivationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/dto/SimDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/dto/SimDetailsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/dto/SimOffersDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/entity/SimDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/entity/SimOffers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/repository/SimDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/repository/SimDetailsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/repository/SimOffersRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/service/SimDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/microservices/SimActivationPortal/simServices/service/SimOffersService.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2EocPPKUgPYeV0CtpMfLpGon2p7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.springboot.microservices.SimActivationPortal.simServices.service" />
+      <recent name="com.springboot.microservices.SimActivationPortal.simServices.repository" />
+      <recent name="com.springboot.microservices.SimActivationPortal.simServices.entity" />
+      <recent name="com.springboot.microservices.SimActivationPortal.simServices.dto" />
+      <recent name="com.springboot.microservices.SimActivationPortal.customerServices.service" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d83f7c7-f743-401b-ad58-3f1a8ae1c15c" name="Changes" comment="" />
+      <created>1663265354357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663265354357</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
