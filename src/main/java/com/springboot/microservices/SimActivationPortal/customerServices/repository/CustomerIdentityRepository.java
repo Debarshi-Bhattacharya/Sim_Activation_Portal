@@ -22,4 +22,5 @@ public interface CustomerIdentityRepository extends JpaRepository<CustomerIdenti
     @Query("select c from CustomerIdentity c where c.uniqueIdNumber=?1")
     public Optional<CustomerIdentity> findById(String id);
 
+
 }
