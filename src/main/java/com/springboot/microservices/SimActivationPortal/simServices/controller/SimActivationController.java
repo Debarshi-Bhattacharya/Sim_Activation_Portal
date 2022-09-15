@@ -13,7 +13,6 @@ import javax.validation.Valid;
 
 @RestController
 public class SimActivationController {
-
     @Autowired
     private SimService simService;
 
